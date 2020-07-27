@@ -20,14 +20,13 @@ export const SlideShow = ( props ) => {
   const [ className, setClassName ] = useState( "hidden" );
   
   useEffect( () => {
+    setClassName( "hidden" );
     window.setTimeout( () => {
       setClassName( "active" );
-    }, 500 );
-    window.setTimeout( () => {
-      setClassName( "hidden" );
-    }, 2500 );
+    }, 2000 );
     window.setTimeout( () => {
       if( index < slides.length - 1 ){
+        
         setIndex( index + 1 );
       }else{
         setIndex( 0 );
@@ -36,8 +35,8 @@ export const SlideShow = ( props ) => {
   }, [ index ] );
   
   return ( <Container slide={ slides[ index ] }>
-      <Cover className={ className }/>
-    </Container> );
+    <Cover className={ className }/>
+  </Container> );
 };
 
 const Container = styled.div`
