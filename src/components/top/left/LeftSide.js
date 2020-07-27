@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Contact } from "./Contact";
+import { Projects } from "./Projects";
 
 /**
  *   LeftSide
@@ -12,6 +13,7 @@ export const LeftSide = ( props ) => {
   
   return ( <Container>
     <Contact/>
+    <Projects/>
   </Container> );
 };
 
