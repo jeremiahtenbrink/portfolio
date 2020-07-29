@@ -23,7 +23,7 @@ export const SlideShow = ( props ) => {
     setClassName( "hidden" );
     window.setTimeout( () => {
       setClassName( "active" );
-    }, 2000 );
+    }, 3100 );
     window.setTimeout( () => {
       if( index < slides.length - 1 ){
         
@@ -31,7 +31,7 @@ export const SlideShow = ( props ) => {
       }else{
         setIndex( 0 );
       }
-    }, 3000 );
+    }, 4000 );
   }, [ index ] );
   
   return ( <Container slide={ slides[ index ] }>
